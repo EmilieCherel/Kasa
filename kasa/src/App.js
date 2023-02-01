@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Header from './components/header';
+import Footer from './components/footer';
 import HousingSheet from './pages/housingSheet';
 import About from './pages/about';
 import NotFound from './pages/notFound';
@@ -26,6 +27,9 @@ function App() {
         <Route path="/a-Propos" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
