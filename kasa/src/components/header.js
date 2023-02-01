@@ -4,7 +4,7 @@ import { StyledLink } from '../utils/style/styledLink';
 import Logo from '../assets/Logo.png';
 
 const NavContainer = styled.nav`
-  padding: 30px;
+  padding: 40px 100px;
   display: flex;
   flex-direction: colonne;
   justify-content: space-between;
@@ -26,7 +26,7 @@ function Header() {
         </Link>
       </div>
       <LinkContainer>
-        <StyledLink to="/" style={{ 'text-decoration-line': 'underline' }}>
+        <StyledLink to="/" style={{ textDecorationLine: 'underline' }}>
           Accueil
         </StyledLink>
         <StyledLink to="/a-Propos">A Propos</StyledLink>
