@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import HomeBannerImg from '../assets/HomeBanner.png';
+import { logements } from '../data/logements';
+import HomeBanner from '../components/homeBanner';
+import Card from '../components/card';
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -8,37 +10,31 @@ const HomeWrapper = styled.div`
 
 const HomeContainer = styled.div``;
 
-const HomeBanner = styled.img`
-  position: relative;
-  filter: brightness(70%);
-  border-radius: 25px;
-`;
-
-const HomeTitle = styled.h1`
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -50%);
-  font-size: 48px;
-  font-weight: 500;
-  color: white;
-`;
-
 const HomeGallery = styled.div`
   margin: 40px 0px;
-  width: 1240px;
-  height: 829px;
+  padding: 30px 20px;
   background: #f7f7f7;
   border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 `;
 
 function Home() {
   return (
     <HomeWrapper>
       <HomeContainer>
-        <HomeBanner src={HomeBannerImg} />
-        <HomeTitle>Chez vous, partout et ailleurs</HomeTitle>
-        <HomeGallery></HomeGallery>
+        <HomeBanner />
+        <HomeGallery>
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              id={logement.id}
+              title={logement.title}
+              cover={logement.cover}
+            />
+          ))}
+        </HomeGallery>
       </HomeContainer>
     </HomeWrapper>
   );
