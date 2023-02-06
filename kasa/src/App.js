@@ -25,7 +25,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/fiche-logement" element={<HousingSheet />} />
+        <Route path="/:housingId" element={<HousingSheet />} />
         <Route path="/a-Propos" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
