@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import colors from '../utils/style/colors';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CollapseWrapper = styled.div`
@@ -39,7 +40,8 @@ function Collapse(props) {
     <CollapseWrapper>
       <CollapseButton onClick={() => setIsOpen(!isOpen)}>
         {props.label}
-        <FontAwesomeIcon icon={faChevronDown} />
+        {!isOpen && <FontAwesomeIcon icon={faChevronDown} />}
+        {isOpen && <FontAwesomeIcon icon={faChevronUp} />}
       </CollapseButton>
       {isOpen && <CollapseContent>{props.children}</CollapseContent>}
     </CollapseWrapper>

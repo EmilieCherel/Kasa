@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { logements } from '../data/logements';
 import colors from '../utils/style/colors';
 import Collapse from '../components/collapse';
-import PicturesSlider from '../components/picturesSlider';
+import Slideshow from '../components/slideshow';
 
 const HousingSheetWrapper = styled.div`
   display: flex;
@@ -59,7 +59,7 @@ function HousingSheet() {
 
   return (
     <HousingSheetWrapper>
-      <PicturesSlider />
+      <Slideshow />
       <HousingSheetContainer>
         <HousingSheetTitle>{logement.title}</HousingSheetTitle>
         <HousingSheetSubtitle>{logement.location}</HousingSheetSubtitle>
