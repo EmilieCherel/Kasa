@@ -4,6 +4,7 @@ import { logements } from '../data/logements';
 import colors from '../utils/style/colors';
 import Collapse from '../components/collapse';
 import Slideshow from '../components/slideshow';
+import NotFound from './notFound';
 
 const HousingSheetWrapper = styled.div`
   display: flex;
@@ -53,11 +54,10 @@ const EquipmentsList = styled.ul`
 
 function HousingSheet() {
   const { housingId } = useParams();
-
-  let logement = [];
-  logement = logements.find((element) => element.id === housingId);
-
-  return (
+  const logement = logements.find((element) => element.id === housingId);
+  return logement === undefined ? (
+    <NotFound />
+  ) : (
     <HousingSheetWrapper>
       <Slideshow />
       <HousingSheetContainer>

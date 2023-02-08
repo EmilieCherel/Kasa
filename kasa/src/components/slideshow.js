@@ -26,42 +26,10 @@ const BulletPoints = styled.p`
   position: absolute;
   z-index: 2;
   left: 50%;
-  bottom: 10%;
+  bottom: 45%;
   color: white;
   font-size: 18px;
 `;
-
-/* const ChevronLeft = (
-  <FontAwesomeIcon
-    icon={faChevronLeft}
-    style={{
-      position: 'absolute',
-      top: '55%',
-      left: '10%',
-      fontSize: '3rem',
-      color: 'white',
-      zIndex: '2',
-      cursor: 'pointer',
-      userSelect: 'none',
-    }}
-  />
-); */
-
-/* const ChevronRight = (
-  <FontAwesomeIcon
-    icon={faChevronRight}
-    style={{
-      position: 'absolute',
-      top: '55%',
-      right: '10%',
-      fontSize: '3rem',
-      color: 'white',
-      zIndex: '2',
-      cursor: 'pointer',
-      userSelect: 'none',
-    }}
-  />
-); */
 
 function Slideshow() {
   const { housingId } = useParams();
@@ -84,13 +52,12 @@ function Slideshow() {
     <SlideContainer>
       {length > 1 && (
         <div>
-          {' '}
           <FontAwesomeIcon
             icon={faChevronLeft}
             onClick={prevPicture}
             style={{
               position: 'absolute',
-              top: '55%',
+              top: '40%',
               left: '10%',
               fontSize: '3rem',
               color: 'white',
@@ -102,7 +69,7 @@ function Slideshow() {
             onClick={nextPicture}
             style={{
               position: 'absolute',
-              top: '55%',
+              top: '40%',
               right: '10%',
               fontSize: '3rem',
               color: 'white',
