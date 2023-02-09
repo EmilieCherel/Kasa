@@ -25,10 +25,10 @@ function HousingSheet() {
         </div>
       </div>
       <div className="collapseWrapper">
-        <Collapse label="Description">
+        <Collapse label="Description" className="collapse">
           <p>{logement.description}</p>
         </Collapse>
-        <Collapse label="Équipements">
+        <Collapse label="Équipements" className="collapse">
           <ul className="equipmentsList">
             {logement.equipments.map((equipment, index) => (
               <li key={equipment + index}>{equipment}</li>

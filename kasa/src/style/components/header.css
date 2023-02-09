@@ -1,13 +1,18 @@
 .navContainer {
-  padding: 40px 100px;
+  max-width: 1240px;
+  margin: auto;
+  padding: 40px 20px;
   display: flex;
-  flex-direction: colonne;
   justify-content: space-between;
-  align-items: center;
+}
+
+.logoContainer {
+  margin: 0;
 }
 
 .linkContainer {
   display: flex;
+  align-items: center;
 }
 
 .styledLink {
@@ -21,4 +26,19 @@
   display: flex;
   align-items: flex-end;
   text-align: rigth;
+}
+
+@media screen and (max-width: 856px) {
+  .logo {
+    width: 145px;
+    height: 47px;
+  }
+  .styledLink {
+    font-size: 12px;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+  .navContainer {
+    padding: 10px 0px 10px 10px;
+  }
 }

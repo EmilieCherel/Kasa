@@ -11,15 +11,23 @@
   );
   background-color: #ff6060;
 }
+@media screen and (max-width: 856px) {
+  .cardWrapper {
+    width: 335px;
+    height: 255px;
+    margin: 10px;
+  }
+}
+
 .cardTitle {
   font-size: 18px;
   font-weight: 400;
   color: white;
   word-wrap: break-word;
   position: absolute;
-  width: 50%;
+  width: 45%;
   left: 5%;
-  bottom: 10%;
+  bottom: 0%;
 }
 .cardCover {
   object-fit: cover;

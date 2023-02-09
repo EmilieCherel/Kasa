@@ -35,9 +35,13 @@
 
 .collapseWrapper {
   display: flex;
+  flex-direction: row;
   width: 100%;
 }
-
+.collapse {
+  display: flex;
+  flex-direction: column;
+}
 .equipmentsList {
   list-style-type: none;
 }

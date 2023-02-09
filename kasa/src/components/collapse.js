@@ -7,7 +7,7 @@ function Collapse(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="collapseWrapper">
+    <div>
       <button className="collapseButton" onClick={() => setIsOpen(!isOpen)}>
         {props.label}
         {!isOpen && <FontAwesomeIcon icon={faChevronDown} />}

@@ -12,24 +12,6 @@
   object-fit: cover;
 }
 
-.chevronLeft {
-  position: 'absolute';
-  top: '40%';
-  left: '10%';
-  font-size: '3rem';
-  color: 'white';
-  z-index: '2';
-}
-
-.chevronRight {
-  position: 'absolute';
-  top: '40%';
-  right: '10%';
-  font-size: '3rem';
-  color: 'white';
-  z-index: '2';
-}
-
 .bulletPoints {
   position: absolute;
   z-index: 2;

@@ -1,26 +1,34 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../assets/Logo.png';
 import '../style/components/header.css';
 
 function Header() {
+  const activeStyle = {
+    textDecoration: 'underline',
+  };
+
   return (
     <nav className="navContainer">
-      <div>
+      <div className="logoContainer">
         <Link to="/">
-          <img src={Logo} alt="Logo Kasa" />
+          <img src={Logo} alt="Logo Kasa" className="logo" />
         </Link>
       </div>
       <div className="linkContainer">
-        <Link
+        <NavLink
           to="/"
           className="styledLink"
-          style={{ textDecorationLine: 'underline' }}
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Accueil
-        </Link>
-        <Link to="/a-Propos" className="styledLink">
+        </NavLink>
+        <NavLink
+          to="/a-Propos"
+          className="styledLink"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
           A Propos
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );

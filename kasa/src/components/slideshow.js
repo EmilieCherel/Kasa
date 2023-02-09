@@ -6,6 +6,7 @@ import {
   faChevronRight,
   faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
+import '../style/components/slideShow.css';
 
 function Slideshow() {
   const { housingId } = useParams();
@@ -31,12 +32,26 @@ function Slideshow() {
           <FontAwesomeIcon
             icon={faChevronLeft}
             onClick={prevPicture}
-            className="chevronLeft"
+            style={{
+              position: 'absolute',
+              top: '40%',
+              left: '10%',
+              fontSize: '3rem',
+              color: 'white',
+              zIndex: '2',
+            }}
           />
           <FontAwesomeIcon
             icon={faChevronRight}
             onClick={nextPicture}
-            className="chevronRight"
+            style={{
+              position: 'absolute',
+              top: '40%',
+              right: '10%',
+              fontSize: '3rem',
+              color: 'white',
+              zIndex: '2',
+            }}
           />
         </div>
       )}
