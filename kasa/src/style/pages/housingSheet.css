@@ -1,0 +1,43 @@
+.housingSheetWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.housingSheetContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.housingSheetTitle {
+  color: #ff6060;
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.housingSheetSubtitle {
+  color: #ff6060;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.housingTag {
+  color: white;
+  font-size: 14px;
+  background: #ff6060;
+  padding: 5px 20px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 10px;
+  width: 115px;
+}
+
+.collapseWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.equipmentsList {
+  list-style-type: none;
+}

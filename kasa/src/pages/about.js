@@ -1,21 +1,11 @@
-import styled from 'styled-components';
 import AboutBannerImg from '../assets/AboutBanner.png';
 import Collapse from '../components/collapse';
-
-const AboutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const AboutBanner = styled.img`
-  border-radius: 25px;
-`;
+import '../style/pages/about.css';
 
 function About() {
   return (
-    <AboutWrapper>
-      <AboutBanner src={AboutBannerImg} />
+    <div className="aboutWrapper">
+      <img className="aboutBanner" src={AboutBannerImg} alt="Paysage" />
       <Collapse label="Fiabilité">
         <p>
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -47,7 +37,7 @@ function About() {
           sur la sécurité domestique pour nos hôtes.
         </p>
       </Collapse>
-    </AboutWrapper>
+    </div>
   );
 }
 

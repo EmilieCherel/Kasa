@@ -1,0 +1,40 @@
+.slideContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slidePicture {
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.chevronLeft {
+  position: 'absolute';
+  top: '40%';
+  left: '10%';
+  font-size: '3rem';
+  color: 'white';
+  z-index: '2';
+}
+
+.chevronRight {
+  position: 'absolute';
+  top: '40%';
+  right: '10%';
+  font-size: '3rem';
+  color: 'white';
+  z-index: '2';
+}
+
+.bulletPoints {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 45%;
+  color: white;
+  font-size: 18px;
+}

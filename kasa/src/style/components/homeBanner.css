@@ -1,0 +1,17 @@
+.homeBannerWrapper {
+  position: relative;
+}
+
+.homeBannerImgContainer {
+  filter: brightness(70%);
+  border-radius: 25px;
+}
+
+.homeTitle {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+}

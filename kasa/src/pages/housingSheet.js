@@ -1,56 +1,9 @@
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
 import { logements } from '../data/logements';
-import colors from '../utils/style/colors';
 import Collapse from '../components/collapse';
 import Slideshow from '../components/slideshow';
 import NotFound from './notFound';
-
-const HousingSheetWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const HousingSheetContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-const HousingSheetTitle = styled.h1`
-  color: ${colors.primary};
-  font-weight: 500;
-  font-size: 36px;
-  margin-bottom: 0;
-`;
-
-const HousingSheetSubtitle = styled.h2`
-  color: ${colors.primary};
-  font-weight: 500;
-  font-size: 18px;
-`;
-
-const HousingTagWrapper = styled.div``;
-
-const HousingTag = styled.span`
-  color: white;
-  font-size: 14px;
-  background: ${colors.primary};
-  padding: 5px 20px;
-  margin: 0px 10px 0px 0px;
-  border-radius: 10px;
-  width: 115px;
-`;
-
-const CollapseWrapper = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
-const EquipmentsList = styled.ul`
-  list-style-type: none;
-`;
+import '../style/pages/housingSheet.css';
 
 function HousingSheet() {
   const { housingId } = useParams();
@@ -58,30 +11,32 @@ function HousingSheet() {
   return logement === undefined ? (
     <NotFound />
   ) : (
-    <HousingSheetWrapper>
+    <div className="housingSheetWrapper">
       <Slideshow />
-      <HousingSheetContainer>
-        <HousingSheetTitle>{logement.title}</HousingSheetTitle>
-        <HousingSheetSubtitle>{logement.location}</HousingSheetSubtitle>
-        <HousingTagWrapper>
+      <div className="housingSheetContainer">
+        <h1 className="housingSheetTitle">{logement.title}</h1>
+        <h2 className="housingSheetSubtitle">{logement.location}</h2>
+        <div className="housingTagWrapper">
           {logement.tags.map((tag, index) => (
-            <HousingTag key={tag + index}>{tag}</HousingTag>
+            <span className="housingTag" key={tag + index}>
+              {tag}
+            </span>
           ))}
-        </HousingTagWrapper>
-      </HousingSheetContainer>
-      <CollapseWrapper>
+        </div>
+      </div>
+      <div className="collapseWrapper">
         <Collapse label="Description">
           <p>{logement.description}</p>
         </Collapse>
         <Collapse label="Équipements">
-          <EquipmentsList>
+          <ul className="equipmentsList">
             {logement.equipments.map((equipment, index) => (
               <li key={equipment + index}>{equipment}</li>
             ))}
-          </EquipmentsList>
+          </ul>
         </Collapse>
-      </CollapseWrapper>
-    </HousingSheetWrapper>
+      </div>
+    </div>
   );
 }
 

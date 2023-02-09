@@ -1,0 +1,24 @@
+.navContainer {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: colonne;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkContainer {
+  display: flex;
+}
+
+.styledLink {
+  padding: 10px 15px;
+  color: #ff6060;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  display: flex;
+  align-items: flex-end;
+  text-align: rigth;
+}

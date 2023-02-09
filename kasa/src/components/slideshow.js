@@ -6,30 +6,6 @@ import {
   faChevronRight,
   faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
-
-const SlideContainer = styled.section`
-position: relative
-display: flex;
-justify-content: center;
-align-items: center;
-`;
-
-const SlidePicture = styled.img`
-  width: 1240px;
-  height: 415px;
-  border-radius: 25px;
-  object-fit: cover;
-`;
-
-const BulletPoints = styled.p`
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  bottom: 45%;
-  color: white;
-  font-size: 18px;
-`;
 
 function Slideshow() {
   const { housingId } = useParams();
@@ -49,32 +25,18 @@ function Slideshow() {
   };
 
   return (
-    <SlideContainer>
+    <section className="slideContainer">
       {length > 1 && (
         <div>
           <FontAwesomeIcon
             icon={faChevronLeft}
             onClick={prevPicture}
-            style={{
-              position: 'absolute',
-              top: '40%',
-              left: '10%',
-              fontSize: '3rem',
-              color: 'white',
-              zIndex: '2',
-            }}
+            className="chevronLeft"
           />
           <FontAwesomeIcon
             icon={faChevronRight}
             onClick={nextPicture}
-            style={{
-              position: 'absolute',
-              top: '40%',
-              right: '10%',
-              fontSize: '3rem',
-              color: 'white',
-              zIndex: '2',
-            }}
+            className="chevronRight"
           />
         </div>
       )}
@@ -82,14 +44,16 @@ function Slideshow() {
       {logement.pictures.map((picture, index) => {
         return (
           <div key={index}>
-            {index === current && <SlidePicture src={picture} alt="logement" />}
+            {index === current && (
+              <img className="slidePicture" src={picture} alt="logement" />
+            )}
           </div>
         );
       })}
-      <BulletPoints>
+      <p className="bulletPoints">
         {current + 1}/{logement.pictures.length}
-      </BulletPoints>
-    </SlideContainer>
+      </p>
+    </section>
   );
 }
 

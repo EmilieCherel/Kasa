@@ -1,30 +1,16 @@
-import styled from 'styled-components';
 import HomeBannerImg from '../assets/HomeBanner.png';
-
-const HomeBannerWrapper = styled.div`
-  position: relative;
-`;
-
-const HomeBannerImgContainer = styled.img`
-  filter: brightness(70%);
-  border-radius: 25px;
-`;
-
-const HomeTitle = styled.h1`
-  position: absolute;
-  left: 20%;
-  top: 20%;
-  font-size: 48px;
-  font-weight: 500;
-  color: white;
-`;
+import '../style/components/homeBanner.css';
 
 function HomeBanner() {
   return (
-    <HomeBannerWrapper>
-      <HomeBannerImgContainer src={HomeBannerImg} />
-      <HomeTitle>Chez vous, partout et ailleurs</HomeTitle>
-    </HomeBannerWrapper>
+    <div className="homeBannerWrapper">
+      <img
+        className="homeBannerImgContainer"
+        src={HomeBannerImg}
+        alt="Paysage"
+      />
+      <h1 className="homeTitle">Chez vous, partout et ailleurs</h1>
+    </div>
   );
 }
 

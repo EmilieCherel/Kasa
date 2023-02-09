@@ -1,31 +1,14 @@
-import styled from 'styled-components';
 import { logements } from '../data/logements';
 import HomeBanner from '../components/homeBanner';
 import Card from '../components/card';
-
-const HomeWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-const HomeContainer = styled.div``;
-
-const HomeGallery = styled.div`
-  margin: 40px 0px;
-  padding: 30px 20px;
-  background: #f7f7f7;
-  border-radius: 25px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-`;
+import '../style/pages/home.css';
 
 function Home() {
   return (
-    <HomeWrapper>
-      <HomeContainer>
+    <div className="homeWrapper">
+      <div className="homeContainer">
         <HomeBanner />
-        <HomeGallery>
+        <div className="homeGallery">
           {logements.map((logement) => (
             <Card
               key={logement.id}
@@ -34,9 +17,9 @@ function Home() {
               cover={logement.cover}
             />
           ))}
-        </HomeGallery>
-      </HomeContainer>
-    </HomeWrapper>
+        </div>
+      </div>
+    </div>
   );
 }
 

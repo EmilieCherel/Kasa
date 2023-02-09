@@ -1,0 +1,14 @@
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.homeGallery {
+  margin: 40px 0px;
+  padding: 30px 20px;
+  background: #f7f7f7;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
