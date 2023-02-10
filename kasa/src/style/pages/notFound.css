@@ -6,13 +6,10 @@
 }
 
 .errorTitle {
-  width: 597px;
-  height: 263px;
   color: #ff6060;
   font-weight: 700;
   font-size: 288px;
   margin: 30px;
-  line-height: 411px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -23,7 +20,7 @@
   font-size: 36px;
   color: #ff6060;
   padding-bottom: 50px;
-  display: flex;
+  text-align: center;
 }
 
 .linkToHome {
@@ -32,5 +29,23 @@
   color: #ff6060;
   display: flex;
   padding-top: 80px;
+  padding-bottom: 150px;
   text-decoration-line: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .errorTitle {
+    font-size: 96px;
+    margin-top: 180px;
+    margin-bottom: 0px;
+  }
+  .errorSubtitle {
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 26px;
+  }
+  .linkToHome {
+    font-size: 14px;
+    padding-bottom: 235px;
+  }
 }
