@@ -1,11 +1,23 @@
 import AboutBannerImg from '../assets/AboutBanner.png';
+import AboutBannerImgMobile from '../assets/AboutBannerMobile.png';
 import Collapse from '../components/collapse';
 import '../style/pages/about.css';
 
 function About() {
   return (
     <div className="aboutWrapper">
-      <img className="aboutBanner" src={AboutBannerImg} alt="Paysage" />
+      <picture>
+        <source
+          media="(max-width:400px)"
+          srcSet={`${AboutBannerImgMobile} 336w`}
+        />
+        <source media="(min-width:401px)" srcSet={`${AboutBannerImg} 1240w`} />
+        <img
+          src={AboutBannerImg}
+          alt="Paysage"
+          className="aboutBannerImgContainer"
+        />
+      </picture>
       <div className="collapseWrapper">
         <Collapse label="Fiabilité">
           <p>
