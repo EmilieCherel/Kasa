@@ -6,17 +6,24 @@
 }
 
 .slidePicture {
-  width: 1240px;
-  height: 415px;
   border-radius: 25px;
   object-fit: cover;
+  width: 100%;
 }
 
 .bulletPoints {
   position: absolute;
   z-index: 2;
   left: 50%;
-  bottom: 45%;
+  bottom: 5%;
   color: white;
   font-size: 18px;
+}
+
+@media screen and (max-width: 400px) {
+  .slidePicture {
+    width: 335px;
+    height: 255px;
+    border-radius: 10px;
+  }
 }

@@ -34,8 +34,8 @@ function Slideshow() {
             onClick={prevPicture}
             style={{
               position: 'absolute',
-              top: '40%',
-              left: '10%',
+              top: '45%',
+              left: '5%',
               fontSize: '3rem',
               color: 'white',
               zIndex: '2',
@@ -46,8 +46,8 @@ function Slideshow() {
             onClick={nextPicture}
             style={{
               position: 'absolute',
-              top: '40%',
-              right: '10%',
+              top: '45%',
+              right: '5%',
               fontSize: '3rem',
               color: 'white',
               zIndex: '2',

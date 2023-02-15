@@ -1,0 +1,9 @@
+.ratingStar {
+  padding: 5px;
+}
+@media screen and (max-width: 400px) {
+  .ratingStar {
+    width: 15px;
+    height: 15px;
+  }
+}

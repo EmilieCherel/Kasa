@@ -3,6 +3,7 @@ import { logements } from '../data/logements';
 import Collapse from '../components/collapse';
 import Slideshow from '../components/slideshow';
 import NotFound from './notFound';
+import Rating from '../components/rating';
 import '../style/pages/housingSheet.css';
 
 function HousingSheet() {
@@ -12,29 +13,44 @@ function HousingSheet() {
     <NotFound />
   ) : (
     <div className="housingSheetWrapper">
-      <Slideshow />
       <div className="housingSheetContainer">
-        <h1 className="housingSheetTitle">{logement.title}</h1>
-        <h2 className="housingSheetSubtitle">{logement.location}</h2>
-        <div className="housingTagWrapper">
-          {logement.tags.map((tag, index) => (
-            <span className="housingTag" key={tag + index}>
-              {tag}
-            </span>
-          ))}
+        <Slideshow />
+        <div className="housingSheetTitleTagHostRating">
+          <div className="housingSheetTitleTag">
+            <h1 className="housingSheetTitle">{logement.title}</h1>
+            <h2 className="housingSheetSubtitle">{logement.location}</h2>
+            <div className="housingTagWrapper">
+              {logement.tags.map((tag, index) => (
+                <span className="housingTag" key={tag + index}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="housingHostRating">
+            <div className="housingHost">
+              <span className="housingHostName">{logement.host.name}</span>
+              <img
+                src={logement.host.picture}
+                alt="Propriétaire du logement"
+                className="housingHostPicture"
+              />
+            </div>
+            <Rating rating={logement.rating} />
+          </div>
         </div>
-      </div>
-      <div className="collapseWrapper">
-        <Collapse label="Description" className="collapse">
-          <p>{logement.description}</p>
-        </Collapse>
-        <Collapse label="Équipements" className="collapse">
-          <ul className="equipmentsList">
-            {logement.equipments.map((equipment, index) => (
-              <li key={equipment + index}>{equipment}</li>
-            ))}
-          </ul>
-        </Collapse>
+        <div className="collapseContainer">
+          <Collapse label="Description" className="housingCollapse">
+            <p>{logement.description}</p>
+          </Collapse>
+          <Collapse label="Équipements" className="housingCollapse">
+            <ul className="equipmentsList">
+              {logement.equipments.map((equipment, index) => (
+                <li key={equipment + index}>{equipment}</li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 .collapse {
+  display: flex;
+  flex-direction: column;
   margin: 15px;
   width: 100%;
 }
@@ -21,7 +23,8 @@
   color: #ff6060;
   font-size: 24px;
   font-weight: 400;
-  padding: 10px 15px 0px;
+  padding: 10px 20px 0px;
+  min-height: 249px;
 }
 
 @media screen and (max-width: 400px) {
