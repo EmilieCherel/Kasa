@@ -32,26 +32,12 @@ function Slideshow() {
           <FontAwesomeIcon
             icon={faChevronLeft}
             onClick={prevPicture}
-            style={{
-              position: 'absolute',
-              top: '45%',
-              left: '5%',
-              fontSize: '3rem',
-              color: 'white',
-              zIndex: '2',
-            }}
+            className="chevronLeft"
           />
           <FontAwesomeIcon
             icon={faChevronRight}
             onClick={nextPicture}
-            style={{
-              position: 'absolute',
-              top: '45%',
-              right: '5%',
-              fontSize: '3rem',
-              color: 'white',
-              zIndex: '2',
-            }}
+            className="chevronRight"
           />
         </div>
       )}

@@ -29,7 +29,7 @@
     width: 220px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .homeBannerImgContainer {
     width: 335px;
     border-radius: 10px;

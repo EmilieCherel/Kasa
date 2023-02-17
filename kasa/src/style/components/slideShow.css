@@ -1,14 +1,32 @@
 .slideContainer {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 1240px;
 }
 
 .slidePicture {
   border-radius: 25px;
   object-fit: cover;
+  max-height: 415px;
   width: 100%;
+  user-select: none;
+}
+
+.chevronLeft {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  font-size: 3rem;
+  color: white;
+  z-index: 2;
+}
+
+.chevronRight {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+  font-size: 3rem;
+  color: white;
+  z-index: 2;
 }
 
 .bulletPoints {
@@ -20,10 +38,27 @@
   font-size: 18px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1280px) {
+  .slideContainer {
+    width: 1240px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .slideContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .slidePicture {
-    width: 335px;
-    height: 255px;
     border-radius: 10px;
+  }
+  .chevronLeft,
+  .chevronRight {
+    font-size: 2rem;
+  }
+  .bulletPoints {
+    font-size: 14px;
   }
 }

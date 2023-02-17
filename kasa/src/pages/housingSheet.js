@@ -40,10 +40,10 @@ function HousingSheet() {
           </div>
         </div>
         <div className="collapseContainer">
-          <Collapse label="Description" className="housingCollapse">
+          <Collapse label="Description">
             <p>{logement.description}</p>
           </Collapse>
-          <Collapse label="Équipements" className="housingCollapse">
+          <Collapse label="Équipements">
             <ul className="equipmentsList">
               {logement.equipments.map((equipment, index) => (
                 <li key={equipment + index}>{equipment}</li>

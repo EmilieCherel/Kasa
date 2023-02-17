@@ -1,8 +1,15 @@
-.collapse {
+.aboutCollapse {
   display: flex;
   flex-direction: column;
   margin: 15px;
   width: 100%;
+}
+
+.housingCollapse {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  width: 47%;
 }
 
 .collapseButton {
@@ -12,6 +19,7 @@
   font-size: 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   border: 0px;
   height: 50px;
@@ -27,12 +35,17 @@
   min-height: 249px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .collapseButton {
     font-size: 13px;
     height: auto;
   }
   .collapseContent {
     font-size: 12px;
+    min-height: 143px;
+  }
+  .housingCollapse {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
