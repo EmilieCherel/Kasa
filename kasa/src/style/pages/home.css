@@ -19,8 +19,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
 }
 @media screen and (max-width: 856px) {
   .homeWrapper {
@@ -30,7 +28,6 @@
     margin: 20px 0px;
   }
 }
-
 @media screen and (max-width: 376px) {
   .homeGallery {
     background: none;

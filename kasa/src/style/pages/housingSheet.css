@@ -104,9 +104,15 @@
   .housingSheetSubtitle {
     font-size: 14px;
   }
+  .housingTagWrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .housingTag {
     font-size: 10px;
     border-radius: 5px;
+    padding: 2px;
+    text-align: center;
   }
 
   .housingHostName {
